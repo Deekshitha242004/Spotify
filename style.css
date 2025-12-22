@@ -36,17 +36,57 @@ nav ul li{
     font-size: 1.3rem;
 }
 .container{
-   min-height: 75vh;
+   min-height: 62vh;
+   background-color: black;
+   color: white;
+   font-family: 'Varela Round',sans-serif;
+   display: flex;
+   margin:23px auto;
+   width:70%;
+   border-radius: 12px;
+   padding:34px;
+   background-image: url(./assests/bg1.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+
 }
 .bottom{
    position:sticky;
-   height: 130px; 
+   height: 120px; 
    background-color: black;
+   color:white;
    bottom: 0;
    display: flex;
    align-items: center;
    justify-content: center;
+   flex-direction: column;
+   
+}
+.icons{
+    margin-top: 14px;
+}
+.icons i{
+    cursor: pointer;
 }
 #myprogress{
     width:80vw;
+}
+.songitem{
+    height:50px;
+    display:flex;
+    background-color: white;
+    
+    color:black;
+    margin:12px 0;
+    justify-content:space-around; 
+    align-items: center;
+    border-radius: 34px;
+    
+}
+.songitem img{
+    width:43px;
+    border-radius: 34px;    
+}
+.timestamp {
+    margin-right: 10px;
 }
