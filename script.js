@@ -1,4 +1,4 @@
-console.log("Welcome To Spotify");
+
 
 // Variables
 
