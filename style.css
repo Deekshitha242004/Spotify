@@ -11,6 +11,10 @@ body{
     background-color:antiquewhite;
     overflow-x:hidden;
 }
+li a{
+    text-decoration: none;
+    color: white;
+}
 
 /* Navbar */
 
