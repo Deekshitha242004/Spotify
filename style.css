@@ -70,6 +70,10 @@ nav ul li{
 }
 #myprogress{
     width:80vw;
+    cursor: pointer;
+}
+.songitemContainer{
+       margin-top: 54px;
 }
 .songitem{
     height:50px;
@@ -83,10 +87,84 @@ nav ul li{
     border-radius: 34px;
     
 }
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    display: flex;
+    align-items: center;
+    font-family: 'Varela Round',sans-serif;
+    gap: 8px;
+}
+.songInfo img{
+    opacity:0;
+    transition:opacity 0.4s ease-in;
+   
+}
 .songitem img{
     width:43px;
     border-radius: 34px;    
 }
 .timestamp {
     margin-right: 10px;
+}
+.songlistplay{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.songItemPlay{
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+    .container{
+        width:95%;
+        padding:15px;
+    }
+
+    .songitem{
+        font-size:12px;
+    }
+
+    .songInfo{
+        left:2vw;
+        font-size:12px;
+    }
+
+    .icons i{
+        font-size:2rem !important;
+    }
+}
+@media screen and (max-width: 768px){
+
+    .container{
+        width:90%;
+        padding:20px;
+        background-position:center;
+    }
+
+    .songitem{
+        font-size:12px;
+    }
+
+    .songInfo{
+        position:static;
+        margin-top:10px;
+        font-size:12px;
+    }
+
+    .icons i{
+        font-size:2rem !important;
+    }
+
+    #myprogress{
+        width:95vw;
+    }
+
+    .bottom{
+        height:auto;
+        padding:10px;
+    }
 }
