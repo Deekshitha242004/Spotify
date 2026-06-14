@@ -1,121 +1,206 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
-
-
-body{
-    background-color:antiquewhite;
-}
 *{
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
+
+body{
+    background-color:antiquewhite;
+    overflow-x:hidden;
+}
+
+/* Navbar */
+
 nav{
-  font-family: "Ubuntu", sans-serif;
+    font-family:"Ubuntu",sans-serif;
 }
+
 nav ul{
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    height: 65px;
-    background-color: black;
+    display:flex;
+    align-items:center;
+    list-style:none;
+    height:65px;
+    background:black;
     color:white;
 }
+
 nav ul li{
     padding:0 12px;
+    cursor:pointer;
 }
+
+.brand{
+    display:flex;
+    align-items:center;
+    font-weight:bold;
+    font-size:1.3rem;
+}
+
 .brand img{
     width:44px;
     padding:0 8px;
 }
-.brand{
-    display: flex;
-    align-items: center;
-    font-weight: bolder;
-    font-size: 1.3rem;
-}
-.container{
-   min-height: 62vh;
-   background-color: black;
-   color: white;
-   font-family: 'Varela Round',sans-serif;
-   display: flex;
-   margin:23px auto;
-   width:70%;
-   border-radius: 12px;
-   padding:34px;
-   background-image: url(./assests/bg1.jpg);
-   background-repeat: no-repeat;
-   background-size: cover;
 
+/* Main Container */
+
+.container{
+    min-height:62vh;
+    width:70%;
+    margin:23px auto;
+    padding:34px;
+    border-radius:12px;
+
+    color:white;
+    font-family:'Varela Round',sans-serif;
+
+    background-image:url("./assests/bg1.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
-.bottom{
-   position:sticky;
-   height: 120px; 
-   background-color: black;
-   color:white;
-   bottom: 0;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-   
-}
-.icons{
-    margin-top: 14px;
-}
-.icons i{
-    cursor: pointer;
-}
-#myprogress{
-    width:80vw;
-    cursor: pointer;
-}
+
+/* Song List */
+
 .songitemContainer{
-       margin-top: 54px;
+    margin-top:35px;
 }
+
+/* Song Box */
+
 .songitem{
-    height:50px;
+    height:60px;
+    width:650px;
+
     display:flex;
-    background-color: white;
-    
+    align-items:center;
+    justify-content:space-between;
+
+    background:white;
     color:black;
+
     margin:12px 0;
-    justify-content:space-around; 
-    align-items: center;
-    border-radius: 34px;
-    
+    padding:0 18px;
+
+    border-radius:40px;
 }
-.songInfo{
-    position: absolute;
-    left: 10vw;
-    display: flex;
-    align-items: center;
-    font-family: 'Varela Round',sans-serif;
-    gap: 8px;
-}
-.songInfo img{
-    opacity:0;
-    transition:opacity 0.4s ease-in;
-   
-}
+
+/* Song Cover */
+
 .songitem img{
-    width:43px;
-    border-radius: 34px;    
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+    object-fit:cover;
 }
-.timestamp {
-    margin-right: 10px;
-}
+
+/* Song Play Area */
+
 .songlistplay{
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:15px;
 }
 
 .songItemPlay{
     cursor:pointer;
 }
+
+.timestamp{
+    min-width:45px;
+    text-align:right;
+}
+
+/* Bottom Player */
+
+.bottom{
+    position:sticky;
+    bottom:0;
+
+    height:120px;
+
+    background:black;
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+#myprogress{
+    width:80vw;
+    cursor:pointer;
+}
+
+.icons{
+    margin-top:12px;
+}
+
+.icons i{
+    cursor:pointer;
+    margin:0 12px;
+}
+
+.songInfo{
+    position:absolute;
+    left:10vw;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    font-family:'Varela Round',sans-serif;
+}
+
+.songInfo img{
+    opacity:0;
+    transition:opacity .4s ease-in;
+}
+
+/* ========================= */
+/* Large Tablets */
+/* ========================= */
+
+@media (max-width:1200px){
+
+    .container{
+        width:85%;
+    }
+
+    .songitem{
+        width:100%;
+    }
+}
+
+/* ========================= */
+/* Tablets */
+/* ========================= */
+
+@media (max-width:992px){
+
+    .container{
+        width:90%;
+        padding:25px;
+    }
+
+    .songitem{
+        width:100%;
+        font-size:14px;
+    }
+
+    .songInfo{
+        left:4vw;
+    }
+}
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
 
 @media (max-width:768px){
 
@@ -124,34 +209,26 @@ nav ul li{
         padding:15px;
     }
 
-    .songitem{
-        font-size:12px;
-    }
-
-    .songInfo{
-        left:2vw;
-        font-size:12px;
-    }
-
-    .icons i{
-        font-size:2rem !important;
-    }
-}
-@media screen and (max-width: 768px){
-
-    .container{
-        width:90%;
-        padding:20px;
-        background-position:center;
+    .container h1{
+        font-size:1.8rem;
     }
 
     .songitem{
-        font-size:12px;
+        width:100%;
+        height:55px;
+
+        padding:0 10px;
+
+        font-size:13px;
     }
 
-    .songInfo{
-        position:static;
-        margin-top:10px;
+    .songitem img{
+        width:40px;
+        height:40px;
+    }
+
+    .timestamp{
+        min-width:35px;
         font-size:12px;
     }
 
@@ -163,8 +240,61 @@ nav ul li{
         width:95vw;
     }
 
+    .songInfo{
+        position:static;
+        margin-top:10px;
+        font-size:12px;
+        text-align:center;
+    }
+
     .bottom{
         height:auto;
         padding:10px;
+    }
+}
+
+/* ========================= */
+/* Small Mobile */
+/* ========================= */
+
+@media (max-width:480px){
+
+    nav ul li{
+        padding:0 6px;
+        font-size:14px;
+    }
+
+    .brand{
+        font-size:1rem;
+    }
+
+    .brand img{
+        width:35px;
+    }
+
+    .container h1{
+        font-size:1.5rem;
+    }
+
+    .songitem{
+        font-size:11px;
+        gap:5px;
+    }
+
+    .songitem img{
+        width:35px;
+        height:35px;
+    }
+
+    .timestamp{
+        font-size:11px;
+    }
+
+    .icons i{
+        font-size:1.6rem !important;
+    }
+
+    .songInfo{
+        font-size:11px;
     }
 }
